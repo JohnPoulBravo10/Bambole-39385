@@ -6,7 +6,7 @@
 
 
  
-
+/*
 header{
     background-color: #647457;
     text-align: center;
@@ -79,5 +79,98 @@ img{
 .fototienda{
    height: 100%;
    width: 100%;
+}
+*/
+.hero{
+   display: grid;
+   grid-template-columns: 1fr ;
+   grid-template-rows: 10% auto 10% ; 
+   grid-template-areas :"header""main""footer";
+}
+
+header{
+   grid-area:"header";
+   order: 1;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background-color: #647457;
+   text-align: center;
+   font-family: 'Bebas Neue', cursive;
+}
+
+main{
+   grid-area:"main";
+   order: 2;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 40px;
+   background-color: beige; 
+   text-align: center;
+   font-family: 'Bebas Neue', cursive;
+   align-items: center;
+}
+
+footer{
+   grid-area:"footer";
+   order: 3;
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #647457;
+   font-family: 'Bebas Neue', cursive;
+}
+
+
+main h2{
+  padding: 30px;
+}
+
+
+.navbar {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  justify-content: center;
+  gap: 40px;
+}
+
+
+
+a{
+   text-decoration: none;
+   list-style: none;
+   color: black;
+}
+
+img{
+   width: 200px;
+   height: 200px;
+ }
+
+.bambole{
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.ubicacion{
+  text-align: center;
+}
+.fototienda{
+  height: 100%;
+  width: 100%;
+}
+
+.sectionPrincipal{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr ;
+   grid-template-rows: 1fr 1fr ; 
+   grid-template-areas :"img1 img2 img3 img4""img5 img 6 img7 img 8";
+}
+
+.img1{
+   
 }
 
