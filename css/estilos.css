@@ -84,7 +84,7 @@ img{
 .hero{
    display: grid;
    grid-template-columns: 1fr ;
-   grid-template-rows: auto auto auto ; 
+   grid-template-rows: 10% auto 10% ; 
    grid-template-areas :"header""main""footer";
 }
 
@@ -100,15 +100,16 @@ header{
 }
 
 main{
+   width: 100%;
    grid-area:"main";
    order: 2;
    display: flex;
-   flex-wrap: wrap;
-   gap: 40px;
    background-color: beige; 
    text-align: center;
    font-family: 'Bebas Neue', cursive;
    align-items: center;
+   justify-content: center;
+
 }
 
 footer{
@@ -121,8 +122,9 @@ footer{
    align-items: center;
    background-color: #647457;
    font-family: 'Bebas Neue', cursive;
+   text-align: center;
+   padding: 40px;
 }
-
 
 main h2{
   padding: 30px;
@@ -138,7 +140,9 @@ main h2{
   gap: 40px;
 }
 
-
+.navbar li{
+   list-style: none;
+}
 
 a{
    text-decoration: none;
@@ -147,7 +151,7 @@ a{
 }
 
 img{
-   width: 200px;
+   width: 100%;
    height: 200px;
  }
 
@@ -163,14 +167,100 @@ img{
   width: 100%;
 }
 
-.sectionPrincipal{
+.seccionPrincipalInicio{ 
+   padding-bottom: 100px;
+   width: 90%;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr ;
-   grid-template-rows: 1fr 1fr ; 
-   grid-template-areas :"img1 img2 img3 img4""img5 img 6 img7 img 8";
+   grid-template-rows: 5% 1fr 1fr ; 
+   grid-template-areas : "h2 h2 h2 h2""img1 img2 img3 img4""img5 img6 img7 img8";
+   gap: 100px;
 }
 
-.img1{
+.seccionPrincipalInicio h2{
+   grid-area: h2;
+}
+.seccionPrincipalProducto{ 
+   padding-bottom: 100px;
+   width: 90%;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr ;
+   grid-template-rows: 5% 1fr 1fr 1fr; 
+   grid-template-areas : "h2 h2 h2 h2""img1 img2 img3 img4""img5 img6 img7 img8""img9 img10 img11 img12";
+   gap: 100px;
+}
+.seccionPrincipalProducto h2{
+   grid-area: h2;
+}
+.seccionPrincipalContacto{
+   width: 90%;
+   height: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr;
+   grid-template-areas: "seccionredes formulario";
+   justify-content: space-around;
+   align-items: center;
+}
+.seccionredes{
+   grid-area: seccionredes;
+}
+.contentform{
+   grid-area: formulario;
+}
+.formulario{
+   height: 500px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
    
 }
+.img1{
+   grid-area: img1;
+   border: 3px solid black;
+}
+.img2{
+   grid-area: img2;
+   border: 3px solid black;
 
+}
+.img3{
+   border: 3px solid black;
+   grid-area: img3;
+}
+.img4{
+   border: 3px solid black;
+   grid-area: img4;
+}
+.img5{
+   border: 3px solid black;
+   grid-area: img5;
+}
+.img6{
+   border: 3px solid black;
+   grid-area: img6;
+}
+.img7{
+   border: 3px solid black;
+   grid-area: img7;
+}
+.img8{
+   border: 3px solid black;
+   grid-area: img8;
+}
+.img9{
+   border: 3px solid black;
+   grid-area: img9;
+}
+.img10{
+   border: 3px solid black;
+   grid-area: img10;
+}
+.img11{
+   border: 3px solid black;
+   grid-area: img11;
+}
+.img12{
+   border: 3px solid black;
+   grid-area: img12;
+}
