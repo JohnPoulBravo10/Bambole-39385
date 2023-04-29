@@ -5,94 +5,20 @@
 }
 
 
- 
-/*
-header{
-    background-color: #647457;
-    text-align: center;
-    font-family: 'Bebas Neue', cursive;
-}
-
-main{
-    background-color: beige; 
-    text-align: center;
-    font-family: 'Bebas Neue', cursive;
-    align-items: center;
-}
-
- footer{
-    background-color: #647457;
-    font-family: 'Bebas Neue', cursive;
- }
-
-main h2{
-   padding: 30px;
-}
-
-
- .navbar {
-   display: flex;
-   flex-direction: row;
-   font-size: 30px;
-   align-items: center;
-}
-
-.arriba  {
-   padding: 30px;
-   display: flex;
-}
-
-.abajo{
-   padding: 30px;
-   display: flex;
-
-}
-
-a{
-    text-decoration: none;
-    color: black;
- }
-
-img{
-   width: 200px;
-   height: 200px;
-}
-
- .bambole{
-   font-family: 'Sedgwick Ave Display', cursive;
-   font-size: 90px;
-   font-weight: 30px;
-}
-.redes{
-   text-align: left;
-}
-.contacto {
-   text-align: right;
-}
-.eslogan{
-   text-align: center;
-   width: 100%;
-}
-.ubicacion{
-   text-align: center;
-}
-.fototienda{
-   height: 100%;
-   width: 100%;
-}
-*/
 .hero{
    display: grid;
    grid-template-columns: 1fr ;
-   grid-template-rows: 10% auto 10% ; 
+   grid-template-rows: 60px auto 60px; 
    grid-template-areas :"header""main""footer";
 }
 
 header{
+   position: sticky;
+   top: 0;
    grid-area:"header";
    order: 1;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
    background-color: #647457;
    text-align: center;
@@ -100,6 +26,7 @@ header{
 }
 
 main{
+   padding: 20px;
    width: 100%;
    grid-area:"main";
    order: 2;
@@ -125,6 +52,9 @@ footer{
    text-align: center;
    padding: 40px;
 }
+.logo{
+   padding-left: 20px;
+}
 
 main h2{
   padding: 30px;
@@ -132,6 +62,7 @@ main h2{
 
 
 .navbar {
+   padding-right: 30px;
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -150,13 +81,15 @@ a{
    color: black;
 }
 
-img{
+figure img{
    width: 100%;
    height: 200px;
+   border-radius: 10px;
  }
 
 .bambole{
   font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 40px;
 }
 
 .ubicacion{
@@ -166,16 +99,21 @@ img{
   height: 100%;
   width: 100%;
 }
+.iconos{
+   width: 16px;
+   height: 16px;
+}
 
 .seccionPrincipalInicio{ 
    padding-bottom: 100px;
    width: 90%;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr ;
-   grid-template-rows: 5% 1fr 1fr ; 
+   grid-template-rows: 5%  1fr 1fr ; 
    grid-template-areas : "h2 h2 h2 h2""img1 img2 img3 img4""img5 img6 img7 img8";
    gap: 100px;
 }
+
 
 .seccionPrincipalInicio h2{
    grid-area: h2;
@@ -203,7 +141,11 @@ img{
    align-items: center;
 }
 .seccionredes{
+   height: 300px;
    grid-area: seccionredes;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
 }
 .contentform{
    grid-area: formulario;
@@ -215,52 +157,212 @@ img{
    justify-content: space-around;
    
 }
+.redes,.eslogan,.contacto,.ubicacion{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 2px;
+   font-size: 20px;
+}
+.redes{
+   gap: 1px;
+}
+.eslogan{
+   font-size: 20px;
+}
+
+.img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8,.img9,.img10,.img11,.img12{
+   border: 3px solid black;
+   color: black;
+   border-radius: 10px;
+   background-color: #647457 ;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
 .img1{
    grid-area: img1;
-   border: 3px solid black;
 }
 .img2{
    grid-area: img2;
-   border: 3px solid black;
-
 }
 .img3{
-   border: 3px solid black;
    grid-area: img3;
 }
 .img4{
-   border: 3px solid black;
    grid-area: img4;
 }
-.img5{
-   border: 3px solid black;
+.img5{;
    grid-area: img5;
 }
 .img6{
-   border: 3px solid black;
    grid-area: img6;
 }
 .img7{
-   border: 3px solid black;
    grid-area: img7;
 }
 .img8{
-   border: 3px solid black;
    grid-area: img8;
 }
 .img9{
-   border: 3px solid black;
    grid-area: img9;
 }
 .img10{
-   border: 3px solid black;
    grid-area: img10;
 }
 .img11{
-   border: 3px solid black;
    grid-area: img11;
 }
 .img12{
-   border: 3px solid black;
    grid-area: img12;
+}
+
+
+@media(max-width:768px){
+   .hero{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 400px auto 10%;
+      grid-template-areas: "header""main""footer";
+   }
+   header{
+      position: static;
+      grid-area: header;
+      display: flex;
+      flex-direction: column;
+   }
+   main{
+      grid-area: main;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   footer{
+      grid-area: footer;
+   }
+   .navbar{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+   .seccionPrincipalInicio{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 40px 1fr 1fr 1fr 1fr;
+      grid-template-areas: 
+      "h2 h2"
+      "img1 img2"
+      "img3 img4 "
+      "img5 img6"
+      "img7 img8";
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+   }
+   .seccionPrincipalInicio h2{
+      grid-area: h2;
+   }
+   .img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8,.img9,.img10,.img11,.img12{
+      width: 300px;
+   }
+   .img1{
+      grid-area: img1;
+   }
+   .img2{
+      grid-area: img2;
+   }
+   .img3{
+      grid-area: img3;
+   }
+   .img4{
+      grid-area: img4;
+   }
+   .img5{;
+      grid-area: img5;
+   }
+   .img6{
+      grid-area: img6;
+   }
+   .img7{
+      grid-area: img7;
+   }
+   .img8{
+      grid-area: img8;
+   }
+   .img9{
+      grid-area: img9;
+   }
+   .img10{
+      grid-area: img10;
+   }
+   .img11{
+      grid-area: img11;
+   }
+   .img12{
+      grid-area: img12;
+   }
+}
+@media (max-width: 425px) {
+   .seccionPrincipalInicio{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr ;
+      grid-template-rows: 40px repeat(8,1fr);
+      grid-template-areas: 
+      "h2"
+      "img1"
+      "img2"
+      "img3"
+      "img4"
+      "img5"
+      "img6"
+      "img7" 
+      "img8";
+   }
+   .seccionPrincipalInicio h2{
+      grid-area: h2;
+   }
+   .img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8,.img9,.img10,.img11,.img12{
+      width: 350px;
+     
+   }
+   .img1{
+      grid-area: img1;
+   }
+   .img2{
+      grid-area: img2;
+   }
+   .img3{
+      grid-area: img3;
+   }
+   .img4{
+      grid-area: img4;
+   }
+   .img5{;
+      grid-area: img5;
+   }
+   .img6{
+      grid-area: img6;
+   }
+   .img7{
+      grid-area: img7;
+   }
+   .img8{
+      grid-area: img8;
+   }
+   .img9{
+      grid-area: img9;
+   }
+   .img10{
+      grid-area: img10;
+   }
+   .img11{
+      grid-area: img11;
+   }
+   .img12{
+      grid-area: img12;
+   }
+}
 }
