@@ -267,6 +267,18 @@ figure img{
    .seccionPrincipalInicio h2{
       grid-area: h2;
    }
+   .seccionPrincipalContacto{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "cont""redd";
+   }
+   .seccionredes{
+      grid-area: redd;
+   }
+   .contentform{
+      grid-area: cont;
+   }
    .img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8,.img9,.img10,.img11,.img12{
       width: 300px;
    }
