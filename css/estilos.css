@@ -222,7 +222,7 @@ figure img{
    .hero{
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 400px auto 10%;
+      grid-template-rows: auto auto auto;
       grid-template-areas: "header""main""footer";
    }
    header{
@@ -230,7 +230,9 @@ figure img{
       grid-area: header;
       display: flex;
       flex-direction: column;
+      padding: 20px;
    }
+
    main{
       grid-area: main;
       display: flex;
@@ -245,6 +247,7 @@ figure img{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      padding: 3px;
    }
    .seccionPrincipalInicio{
       width: 100%;
@@ -303,8 +306,27 @@ figure img{
    .img12{
       grid-area: img12;
    }
+   footer{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 20px;
+   }
+   .eslogan{
+      order: 1;
+   }
+   .redes{
+      order: 2;
+   }
+   .contacto{
+      order: 3;
+   }
+   .ubicacion{
+      order: 4;
+   }
 }
 @media (max-width: 425px) {
+ 
    .seccionPrincipalInicio{
       width: 100%;
       display: grid;
@@ -325,7 +347,7 @@ figure img{
       grid-area: h2;
    }
    .img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8,.img9,.img10,.img11,.img12{
-      width: 350px;
+      width: 300px;
      
    }
    .img1{
