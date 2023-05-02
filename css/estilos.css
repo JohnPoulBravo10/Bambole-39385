@@ -2,7 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: 'Archivo', sans-serif;}
+   font-family: 'Archivo', sans-serif}
 
 
 .hero{
@@ -62,7 +62,7 @@ main h2{
 
 
 .navbar {
-   padding-right: 30px;
+  padding-right: 30px;
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -157,13 +157,7 @@ figure img{
    justify-content: space-around;
    
 }
-.redes,.eslogan,.contacto,.ubicacion{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   gap: 2px;
-   font-size: 20px;
-}
+
 .redes{
    gap: 1px;
 }
@@ -216,8 +210,58 @@ figure img{
 .img12{
    grid-area: img12;
 }
+/* css boostrap */
+.card img{
+   height: 200px;
+   width: 100%;
+}
+.navbar-collapse{
+   justify-content: space-around;
+   align-items: center;
+}
+.navbar-brand{
+   list-style: none;
+   text-decoration: none;
+   color: black;
+}
+.footerProductos div{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
 
+.sectionProductos div{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+   position: static;
+}
+@media (max-width: 993px) {
+   .navbar-brand{
+       display: none;
+   }
+   .navbar-brand{
+       justify-content: center;
+   }
+   .headerProductos{
+      position: static;
+   }
+   
+}
 
+/*cierra css boostrap*/
+@media (max-width:1076px){
+   .navbar{
+      font-size: 20px;
+   }
+}
+@media(max-width:835px){
+   .navbar{
+      font-size: 15px;
+   }
+}
 @media(max-width:768px){
    .hero{
       display: grid;
