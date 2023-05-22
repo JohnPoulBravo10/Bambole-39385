@@ -17,7 +17,8 @@ header {
   background-color: #647457;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 1; }
   header nav {
     display: flex;
     justify-content: space-around;
@@ -85,13 +86,38 @@ main {
       color: black;
       border-radius: 10px;
       background-color: #647457;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around; }
-      main .seccionPrincipalInicio figure img {
-        height: 200px;
-        width: 200px;
-        border-radius: 10px; }
+      height: 250px;
+      width: 200px;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr; }
+      main .seccionPrincipalInicio figure div {
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: 1s; }
+        main .seccionPrincipalInicio figure div img {
+          height: 200px;
+          width: 100%;
+          border-radius: 10px; }
+      main .seccionPrincipalInicio figure .front {
+        position: static;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        transform: perspective(500px) rotateY(0deg); }
+      main .seccionPrincipalInicio figure .back {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        transform: perspective(500px) rotateY(180deg); }
+    main .seccionPrincipalInicio figure:hover .front {
+      transform: perspective(500px) rotateY(180deg); }
+    main .seccionPrincipalInicio figure:hover .back {
+      transform: perspective(500px) rotateY(360deg); }
     main .seccionPrincipalInicio .img9 {
       display: none; }
   main .img1 {
@@ -133,10 +159,15 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: space-around; }
-  main .seccionPrincipalNosotros div {
-    width: 90%; }
-    main .seccionPrincipalNosotros div img {
-      width: 100%; }
+  main .seccionPrincipalNosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    main .seccionPrincipalNosotros div {
+      width: 90%; }
+      main .seccionPrincipalNosotros div img {
+        width: 100%; }
   main .seccionPrincipalProductos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
