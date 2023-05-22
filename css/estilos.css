@@ -118,8 +118,6 @@ main {
       transform: perspective(500px) rotateY(180deg); }
     main .seccionPrincipalInicio figure:hover .back {
       transform: perspective(500px) rotateY(360deg); }
-    main .seccionPrincipalInicio .img9 {
-      display: none; }
   main .img1 {
     grid-area: img1; }
   main .img2 {
@@ -136,14 +134,6 @@ main {
     grid-area: img7; }
   main .img8 {
     grid-area: img8; }
-  main .img9 {
-    grid-area: img9; }
-  main .img10 {
-    grid-area: img10; }
-  main .img11 {
-    grid-area: img11; }
-  main .img12 {
-    grid-area: img12; }
   main .seccionPrincipalContacto {
     height: 100%;
     width: 90%;
@@ -241,8 +231,6 @@ main {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "img1 img2 img3" "img4 img5 img6" "img7 img8 img9" "img10 img11 img12";
     gap: 100px; }
-    main .seccionPrincipalInicio .img9 {
-      display: flex; }
   main .seccionPrincipalProductos {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
