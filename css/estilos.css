@@ -297,8 +297,6 @@ main {
     width: 475px; }
     main .galeria img:hover {
       width: 200px; }
-    main .galeria .img5 {
-      display: none; }
   header {
     flex-direction: column;
     justify-content: center;
@@ -393,9 +391,7 @@ main {
   main .galeria {
     width: 300px; }
     main .galeria img:hover {
-      width: 150px; }
-    main .galeria .img4 {
-      display: none; } }
+      width: 150px; } }
 
 * {
   font-family: 'Archivo', sans-serif;
