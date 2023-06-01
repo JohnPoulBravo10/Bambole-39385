@@ -120,7 +120,38 @@ main{
             width: 100%;
          }
       }
+      
     }
+    h2{
+      border: 3px solid black;
+      box-shadow: 0px 5px 10px black;
+      color: black;
+      border-radius: 10px;
+      background-color: #647457 ;
+    }
+    
+       .galeria{
+      display: flex;
+      width: 1200px;
+      height: 430px;
+      border: 3px solid black;
+      box-shadow: 0px 5px 10px black;
+      color: black;
+      border-radius: 10px;
+      background-color: #647457 ;
+      img{
+         width: 0px;
+         flex-grow: 1;
+         object-fit: cover;
+         transition: .5 ease;
+      }
+      img:hover{
+         cursor: crosshair;
+         width: 300px;
+         opacity: 1;
+         filter: contrast(120%);
+      }
+   }
     .seccionPrincipalProductos{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr ;

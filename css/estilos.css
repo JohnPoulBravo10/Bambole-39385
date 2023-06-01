@@ -158,6 +158,31 @@ main {
       width: 90%; }
       main .seccionPrincipalNosotros div img {
         width: 100%; }
+  main h2 {
+    border: 3px solid black;
+    box-shadow: 0px 5px 10px black;
+    color: black;
+    border-radius: 10px;
+    background-color: #647457; }
+  main .galeria {
+    display: flex;
+    width: 1200px;
+    height: 430px;
+    border: 3px solid black;
+    box-shadow: 0px 5px 10px black;
+    color: black;
+    border-radius: 10px;
+    background-color: #647457; }
+    main .galeria img {
+      width: 0px;
+      flex-grow: 1;
+      object-fit: cover;
+      transition: .5 ease; }
+    main .galeria img:hover {
+      cursor: crosshair;
+      width: 300px;
+      opacity: 1;
+      filter: contrast(120%); }
   main .seccionPrincipalProductos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -236,6 +261,11 @@ main {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "img1 img2 img3" "img4 img5 img6" "img7 img8 img9" "img10 img11 img12";
     gap: 100px; }
+  main .galeria {
+    width: 800px;
+    height: 200px; }
+    main .galeria .img6 {
+      display: none; }
   header {
     position: static;
     align-items: center;
@@ -263,6 +293,12 @@ main {
     gap: 20px; }
   main .seccionPrincipalUbicacion iframe {
     width: 100%; }
+  main .galeria {
+    width: 475px; }
+    main .galeria img:hover {
+      width: 200px; }
+    main .galeria .img5 {
+      display: none; }
   header {
     flex-direction: column;
     justify-content: center;
@@ -353,7 +389,13 @@ main {
   main .seccionPrincipalProductos {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(12, 1fr);
-    grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6" "img7" "img8" "img9" "img10" "img11" "img12"; } }
+    grid-template-areas: "img1" "img2" "img3" "img4" "img5" "img6" "img7" "img8" "img9" "img10" "img11" "img12"; }
+  main .galeria {
+    width: 300px; }
+    main .galeria img:hover {
+      width: 150px; }
+    main .galeria .img4 {
+      display: none; } }
 
 * {
   font-family: 'Archivo', sans-serif;

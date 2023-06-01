@@ -15,6 +15,13 @@
             grid-template-areas : "img1 img2 img3" "img4 img5 img6" "img7 img8 img9" "img10 img11 img12";
             gap: 100px;
        }
+       .galeria{
+        width: 800px;
+        height: 200px;
+        .img6{
+            display: none;
+        }
+       }
     }
     header{
         position: static;
@@ -61,6 +68,15 @@
                 width: 100%;
             }
         }
+        .galeria{
+            width: 475px;
+            img:hover{
+                width: 200px;
+            }
+            .img5{
+                display: none;
+            }
+           }
     }
     header{
         flex-direction: column;
@@ -186,6 +202,15 @@
              "img4" "img5" "img6" "img7" "img8" "img9"
               "img10" "img11" "img12";
         }
+        .galeria{
+            width: 300px;
+            img:hover{
+                width: 150px;
+            }
+            .img4{
+                display: none;
+            }
+           }
     }
 
 
