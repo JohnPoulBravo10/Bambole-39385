@@ -70,10 +70,11 @@ main {
   grid-area: "main";
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 50px; }
+  align-items: center;
+  gap: 50px;
+  text-align: center; }
   main .seccionPrincipalInicio {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -109,8 +110,10 @@ main {
         position: static;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        gap: none;
         grid-row: 1/2;
         grid-column: 1/2;
         transform: perspective(500px) rotateY(180deg); }
@@ -138,22 +141,33 @@ main {
     height: 100%;
     width: 90%;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    flex-wrap: wrap; }
+    align-items: center;
+    gap: none; }
     main .seccionPrincipalContacto div {
       display: flex;
       flex-direction: column;
-      justify-content: space-around; }
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: none;
+      gap: none; }
     main .seccionPrincipalContacto form fieldset {
       height: 500px;
       display: flex;
       flex-direction: column;
-      justify-content: space-around; }
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: none;
+      gap: none; }
   main .seccionPrincipalNosotros {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    gap: none; }
     main .seccionPrincipalNosotros div {
       width: 90%; }
       main .seccionPrincipalNosotros div img {
@@ -216,8 +230,10 @@ main {
       main .seccionPrincipalProductos figure .back {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        gap: none;
         grid-row: 1/2;
         grid-column: 1/2;
         transform: perspective(500px) rotateY(180deg); }
@@ -296,7 +312,9 @@ main {
   main .galeria {
     width: 475px; }
     main .galeria img:hover {
-      width: 200px; }
+      width: 200pxpx; }
+    main .galeria .img5 {
+      display: none; }
   header {
     flex-direction: column;
     justify-content: center;
@@ -391,7 +409,11 @@ main {
   main .galeria {
     width: 300px; }
     main .galeria img:hover {
-      width: 150px; } }
+      width: 150px; }
+    main .galeria .img4 {
+      display: none; }
+  main .seccionPrincipalUbicacion iframe {
+    width: 300px; } }
 
 * {
   font-family: 'Archivo', sans-serif;

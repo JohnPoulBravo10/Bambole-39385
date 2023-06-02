@@ -3,12 +3,8 @@ main{
     width: 100%;
     background-color: $background-fondo;
     grid-area: "main";
-    display: flex;
-    flex-direction: column;
+    @include flex(column,nowrap,center,center,50px);
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
 
     .seccionPrincipalInicio{
         display: grid;
@@ -46,10 +42,7 @@ main{
         }
         .back{
          position: static;
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         align-items: center;
+         @include flex(column,nowrap,space-between,center,none);
          grid-row: 1/2;
          grid-column: 1/2;
          transform: perspective(500px) rotateY(180deg);
@@ -92,28 +85,19 @@ main{
     .seccionPrincipalContacto{
         height: 100%;
         width: 90%;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        @include flex(row,wrap,space-around,center,none);
         div{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+         @include flex(column,nowrap,space-around,none,none);
         }
         form{
             fieldset{
                 height: 500px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
+                @include flex(column,nowrap,space-around,none,none);
             }
         }
     }
     .seccionPrincipalNosotros{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
+      @include flex(column,nowrap,space-around,center,none);
       div{
          width:90%;
          img{
@@ -186,10 +170,7 @@ main{
             transform: perspective(500px) rotateY(0deg);
            }
            .back{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            @include flex(column,nowrap,space-between,center,none);
             grid-row: 1/2;
             grid-column: 1/2;
             transform: perspective(500px) rotateY(180deg);
