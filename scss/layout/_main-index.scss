@@ -130,7 +130,7 @@ main{
          transition: .5 ease;
       }
       img:hover{
-         cursor: crosshair;
+         cursor: pointer;
          width: 300px;
          opacity: 1;
          filter: contrast(120%);
@@ -170,7 +170,7 @@ main{
             transform: perspective(500px) rotateY(0deg);
            }
            .back{
-            @include flex(column,nowrap,space-between,center,none);
+            @include flex(column,nowrap,center,center,none);
             grid-row: 1/2;
             grid-column: 1/2;
             transform: perspective(500px) rotateY(180deg);

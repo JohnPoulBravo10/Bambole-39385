@@ -16,13 +16,19 @@ header {
   grid-area: "header";
   background-color: #647457;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  gap: none;
   z-index: 1; }
   header nav {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    gap: none;
     width: 100%; }
     header nav div a {
       font-size: 30px;
@@ -50,14 +56,19 @@ footer {
   background-color: #647457;
   grid-area: "footer";
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  gap: none;
   text-align: center; }
   footer div {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: center;
     text-align: center; }
     footer div a {
       text-decoration: none;
@@ -193,7 +204,7 @@ main {
       object-fit: cover;
       transition: .5 ease; }
     main .galeria img:hover {
-      cursor: crosshair;
+      cursor: pointer;
       width: 300px;
       opacity: 1;
       filter: contrast(120%); }
@@ -231,7 +242,7 @@ main {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         gap: none;
         grid-row: 1/2;

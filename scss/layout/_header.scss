@@ -4,15 +4,10 @@ header{
     top: 0;
     grid-area: "header";
     background-color: $background-hyf;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex(row,nowrap,space-between,center,none);
     z-index: 1;
     nav{
-
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        @include flex(row,nowrap,space-around,center,none);
         width: 100%;
 
 
