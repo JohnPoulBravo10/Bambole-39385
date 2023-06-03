@@ -17,7 +17,7 @@ Este proyecto es resultado de las diferentes etapas de entrega que nos exige la 
 
 ###imagenes del proyecto 
 
-https://github.com/JohnPoulBravo10/Bambole-39385/blob/main/asset/img/Captura%20de%20pantalla%202023-05-22%20194756.jpg
+![] https://github.com/JohnPoulBravo10/Bambole-39385/blob/main/asset/img/Captura%20de%20pantalla%202023-05-22%20194756.jpg
 
 
 
